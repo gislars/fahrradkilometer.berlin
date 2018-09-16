@@ -42,7 +42,12 @@ function onMapMove(e) {
 }
 function getData() {
     //let url = "testdata2.json";
-    let url = "https://overpass-api.de/api/interpreter?data=[out:json];(node(area:3600051701)[highway=milestone];way(area:3600051701)[highway=motorway];);out%20geom;";
+    // way(area:3600062422)[highway=cycleway];
+    // way(area:3600062422)[highway=path][bicycle=designated];
+    // way(area:3600062422)[highway][cycleway!=no][cycleway];
+    // way(area:3600062422)[highway]["cycleway:left"!=no]["cycleway:left"];
+    // way(area:3600062422)[highway]["cycleway:right"!=no]["cycleway:right"];
+    let url = 'https://overpass-api.de/api/interpreter?data=[out:json];(way(area:3600062422)[highway=cycleway];way(area:3600062422)[highway=path][bicycle=designated];way(area:3600062422)[highway][cycleway!=no][cycleway];way(area:3600062422)[highway]["cycleway:left"!=no]["cycleway:left"];way(area:3600062422)[highway]["cycleway:right"!=no]["cycleway:right"];);out%20geom;';
     fetch(url).then(response => response.json()).then(onRequestHighwaysSuccess);
 }
 function onRequestHighwaysSuccess(x) {

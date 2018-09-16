@@ -53,7 +53,7 @@ function onMapMove(e) {
 
 function getData() {
     //let url = "testdata2.json";
-    let url = "http://overpass-api.de/api/interpreter?data=[out:json];(node(area:3600051701)[highway=milestone];way(area:3600051701)[highway=motorway]);out%20geom;";
+    let url = "https://overpass-api.de/api/interpreter?data=[out:json];(node(area:3600051701)[highway=milestone];way(area:3600051701)[highway=motorway]);out%20geom;";
     fetch(url).then(response => response.json()).then(onRequestHighwaysSuccess);
 }
 

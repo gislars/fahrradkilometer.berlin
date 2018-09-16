@@ -14,8 +14,8 @@ function initMap() {
     let lat = parameters.lat || 46.822;
     let lng = parameters.lng || 8.224;
     map = L.map("map", { zoomControl: false }).setView([lat, lng], zoom);
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
         maxZoom: 19,
     }).addTo(map);
     highwayLayer = L.featureGroup();
@@ -42,7 +42,7 @@ function onMapMove(e) {
 }
 function getData() {
     //let url = "testdata2.json";
-    let url = "http://overpass-api.de/api/interpreter?data=[out:json];(node(area:3600051701)[highway=milestone];way(area:3600051701)[highway=motorway]);out%20geom;";
+    let url = "https://overpass-api.de/api/interpreter?data=[out:json];(node(area:3600051701)[highway=milestone];way(area:3600051701)[highway=motorway]);out%20geom;";
     fetch(url).then(response => response.json()).then(onRequestHighwaysSuccess);
 }
 function onRequestHighwaysSuccess(x) {

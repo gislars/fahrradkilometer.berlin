@@ -10,9 +10,9 @@ window.onload = () => {
 };
 function initMap() {
     let parameters = getHashParameters();
-    let zoom = parameters.zoom || 8;
-    let lat = parameters.lat || 46.822;
-    let lng = parameters.lng || 8.224;
+    let zoom = parameters.zoom || 11;
+    let lat = parameters.lat || 52.512645;
+    let lng = parameters.lng || 13.428989;
     map = L.map("map", { zoomControl: false }).setView([lat, lng], zoom);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',

@@ -14,6 +14,21 @@ Die Seite basiert auf https://github.com/dktue/autobahnkilometer.ch
 - GeoJSON https://t.co/QlsZrgatKC
 - Bild https://twitter.com/mapwebbing/status/1041296195447140352
 
+| Bezirk | km Radweg |
+|---|          ---: |
+| Reinickendorf | 126.928.46 | 
+| Spandau | 147.803.84 | 
+| Mitte | 156.905.57 | 
+| Steglitz-Zehlendorf | 182.700.51 | 
+| Treptow-Köpenick | 217.291.95 | 
+| Friedrichshain-Kreuzberg | 89.855.04 | 
+| Tempelhof-Schöneberg | 140.905.37 | 
+| Neukölln | 116.779.10 | 
+| Marzahn-Hellersdorf | 112.511.36 | 
+| Pankow | 164.198.68 | 
+| Charlottenburg-Wilmersdorf | 161.109.90 | 
+| Lichtenberg | 97.543.84 |
+
 ## http://overpass-turbo.eu/ Query
 
 - Im Output (Reiter) sieht man ganz am Ende die km-Zahlen
